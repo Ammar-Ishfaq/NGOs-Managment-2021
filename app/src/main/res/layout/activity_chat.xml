@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat_main_bg"
+    tools:context=".ModuleChat.subViewChat.chat">
+
+    <RelativeLayout
+        android:id="@+id/uselessHeaderChat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/ForLightThemeBlue">
+
+        <ImageView
+            android:id="@+id/uselssclick"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="back"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/subChatImage"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/uselssclick"
+            android:src="@drawable/ic_baseline_person_24" />
+
+        <TextView
+            android:id="@+id/subChatEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="50dp"
+            android:layout_toEndOf="@id/subChatImage"
+            android:gravity="center|start"
+            android:padding="10dp"
+            android:text="ammarishfaq25@gmail.com"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:onClick="callUser"
+            android:src="@drawable/ic_baseline_local_phone_24" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/infoLayoutDfChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view_empty_box"
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="empty_box.json"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:id="@+id/DonorChatFragmentInfotv"
+            style="@style/Widget.MaterialComponents.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:textColor="@color/ForLightThemeBlue"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecycularView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sendLayout"
+        android:layout_below="@+id/uselessHeaderChat"
+        android:descendantFocusability="blocksDescendants"
+        android:overScrollMode="never"
+        app:stackFromEnd="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/chatScrollToBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:onClick="scrollToBottom"
+        android:src="@drawable/ic_arrow_drop_down_black_24dp"
+        android:visibility="visible"
+        app:fabSize="mini" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sendLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+
+                android:id="@+id/attachedForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/ic_baseline_attach_file_24"
+                android:onClick="openSendingMoneyForm"
+                android:scaleType="fitCenter" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="Write message..."
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="2000"
+                android:maxLines="4"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/md_grey_400"
+                android:textSize="17sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/ic_send_black_24dp"
+                android:onClick="sendMessage"
+                android:padding="15dp"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

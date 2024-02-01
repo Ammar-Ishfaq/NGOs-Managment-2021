@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".views.Others.blockPage">
+
+    <TextView
+        android:id="@+id/usellasheadrer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="NOTICE!"
+        android:textColor="@color/black"
+        android:textSize="43sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/emailBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usellasheadrer"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="targetmail@gmail.com"
+        android:textColor="@color/black"
+        android:textSize="23sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/animation_block"
+        android:layout_below="@+id/emailBlock"
+        android:layout_marginTop="20dp"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="It looks like that you violate the Privacy Policy."
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="You'r BLOCKED by the Admin"
+            android:textColor="@color/black"
+            android:textSize="32sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Contact The Admin \n\nammarishfaq25@gmail.com\nfor further details.\nThanks"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_block"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/Logout"
+        android:layout_gravity="center"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="blocked.json"
+        app:lottie_loop="true" />
+
+    <Button
+        android:id="@+id/Logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="logout"
+        android:text="Logout" />
+</RelativeLayout>

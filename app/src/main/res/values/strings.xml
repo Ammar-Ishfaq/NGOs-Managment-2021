@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">fyp</string>
+    <string name="mEmailHint">Email</string>
+    <string name="mFirstName">FirstName</string>
+    <string name="mLastName">LastName</string>
+    <string name="mPasswordHint">Password</string>
+    <string name="mConfirmPasswordHint">ConfirmPassword</string>
+    <string name="mLogin">Login</string>
+    <string name="forgetPass">Click here to Reset</string>
+    <string name="noAccount">Don\'t Have an Account?</string>
+    <string name="signup_now">Signup Now</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="mUserName">User Name</string>
+    <string name="mCnic">CNIC</string>
+    <string name="mPhoneNumber">Contact Number</string>
+    <string name="mDateOfBirth">Select DOB</string>
+    <string name="mAddres">Address</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="age">AGE</string>
+    <string name="mPhoneJazzCash">Jazz Cash Number</string>
+    <string name="mPhoneEasyPaissaCash">Easy Paisa Number</string>
+    <string name="password">Password</string>
+    <string name="user_location_permission_not_granted">"Please Enable Location Permission "</string>
+    <string name="user_location_permission_explanation">Location Permission is Required For Selection of Location</string>
+    <string name="location_picker_dropped_marker_snippet_no_results">No Result Found Below the Marker</string>
+    <string name="location_picker_select_location_button_select">Select Your Location</string>
+    <string name="location_picker_select_location_button_cancel">Reselect Location</string>
+    <string name="move_map_instruction">Move the Map for Your Best location</string>
+    <string name="tap_on_marker_instruction">Click on icon to see details</string>
+
+
+</resources>

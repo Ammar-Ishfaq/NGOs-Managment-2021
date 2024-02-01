@@ -1,0 +1,8 @@
+{
+  "project_info": {
+    "project_number": "YourGooglePlayService",
+    "firebase_url": "https://fyp-default-rtdb.firebaseio.com",
+    "project_id": "fyp",
+    "storage_bucket": "fyp.appspot.com"
+  },
+}

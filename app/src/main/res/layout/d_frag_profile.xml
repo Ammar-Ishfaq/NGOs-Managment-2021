@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="visible">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/chat_header_bd">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Settings"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/profilerel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/profileicon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_person_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/profiletextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/profileicon"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Profile"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/profileicon"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:background="#000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/privacyrel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profilerel">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/privacyicon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_policy_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/privacytextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/privacyicon"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Privacy"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/privacyicon"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:background="#000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/helplinerel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/privacyrel">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/helplineicon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+
+                android:src="@drawable/ic_baseline_local_phone_black_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/helplinetextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/helplineicon"
+
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Help-line"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/helplineicon"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:background="#000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/logoutrel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/helplinerel">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/logouticon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_exit_arrow_left" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/logouttextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toEndOf="@+id/logouticon"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Logout"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/logouticon"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:background="#000" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

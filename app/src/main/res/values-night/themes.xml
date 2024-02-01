@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Fyp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/DarkThemeDarkBlue</item>
+        <item name="colorPrimaryVariant">@color/DarkThemeDarkBlue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <!-- Below is for the Select Donor Or NGO Screen  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--TEXT VIEW -->
+    <style name="TextviewStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/DarkThemeBlue</item>
+    </style>
+
+    <!--Select NGO or DONOR Screen Color Scheme-->
+    <style name="selectionDONORorNGO" parent="Widget.MaterialComponents.CardView">
+        <item name="android:background">@color/DarkThemeBlue</item>
+        <item name="android:tint">@color/DarkThemeDarkBlue</item>
+    </style>
+
+    <!--Generic layout theme for all the background purposes-->
+    <!--Relative layout theme for background purpose-->
+    <style name="backgroundStyle" parent="@android:style/Widget">
+        <item name="android:background">@color/DarkThemeDarkBlue</item>
+    </style>
+    <!--Generic Card Color-->
+    <style name="GenericCardColor" parent="Widget.MaterialComponents.CardView">
+        <item name="android:foreground">@color/DarkThemeBlue</item>
+    </style>
+</resources>

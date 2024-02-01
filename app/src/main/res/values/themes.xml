@@ -1,0 +1,85 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Fyp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ForLightThemeBlue</item>
+        <item name="colorPrimaryVariant">@color/ForLightThemeBlue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="floatingActionButtonStyle">@style/Widget.App.FloatingActionButton</item>
+    </style>
+
+    <!-- Below is for the Select Donor Or NGO Screen  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--TEXT VIEW -->
+    <style name="TextviewStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--Select NGO or DONOR Screen Color Scheme of imageview-->
+    <style name="selectionDONORorNGO" parent="Widget.MaterialComponents.CardView">
+        <item name="android:background">@color/white</item>
+        <item name="android:tint">@color/ForLightThemeBlue</item>
+    </style>
+
+    <!--Generic layout theme for all the background purposes-->
+    <!--Relative layout theme for background purpose-->
+    <style name="backgroundStyle" parent="@android:style/Widget">
+        <item name="android:background">@color/ForLightThemeBlue</item>
+    </style>
+
+    <!--    Generic cardview background-->
+    <style name="GenericCardColor" parent="@android:style/Widget">
+        <item name="android:foreground">@color/white</item>
+    </style>
+
+
+    <!--    for the number input-->
+    <style name="TextLabel" parent="Theme.MaterialComponents">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">#000</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColorHighlight">#ff9900</item>
+
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">#ff1a1a</item>
+        <item name="colorControlNormal">#751aff</item>
+        <item name="colorControlActivated">#00b300</item>
+    </style>
+
+    <!-- Fab Styling   -->
+    <style name="Widget.App.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearance.App.SmallComponent
+        </item>
+    </style>
+
+    <style name="ThemeOverlay.App.FloatingActionButton" parent="">
+        <item name="colorSecondary">@color/ForLightThemeBlue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+    <!--    Fab Styling Finish-->
+
+<!--    for the bottom dialog-->
+    <style name="TransparentDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">     @android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+</resources>

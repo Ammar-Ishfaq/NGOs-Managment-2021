@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+
+        <variable
+            name="loginModel"
+            type="com.ammar.fyp.viewmodels.login.LoginViewModel" />
+
+        <import type="android.view.View" />
+
+
+    </data>
+    <!--By default running some code i neen this-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.login_and_registration.MainActivity">
+
+        <include layout="@layout/background" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mLoginEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mEmailHint"
+                app:startIconDrawable="@drawable/ic_email_black_24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={loginModel.userEmail}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mlogin_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/enter_password"
+                app:endIconMode="password_toggle"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+
+                    android:text="@={loginModel.userPassword}"
+                    app:boxStrokeColor="#fff" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forgot_password"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/mforgetpass"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    gotoResetPassword="@{loginModel.resetPassword}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="@{()-> loginModel.onResetClick()}"
+                    android:text="@string/forgetPass"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+            <!--             showDialog will show the dialog-->
+            <Button
+                android:id="@+id/mloginbtn"
+                checkCredentials="@{loginModel.isAllow}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="@{()-> loginModel.onLoginClicked()}"
+                android:text="@string/mLogin" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noAccount"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/msignup"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    gotoSignup="@{loginModel.signup}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="@{()-> loginModel.onSignUp()}"
+                    android:text="@string/signup_now"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="@{loginModel.loading ? true:false}"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/black"
+                android:indeterminateTintMode="src_atop"
+
+                android:visibility="@{loginModel.loading ? View.VISIBLE : View.GONE}" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
