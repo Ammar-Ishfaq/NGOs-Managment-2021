@@ -4,6 +4,10 @@
 
 This app facilitates seamless management of donations for NGOs, providing donors with transparency and the ability to track their contributions. NGOs can upload client details for donor verification.
 
+## Admin-dashboard
+
+You can access the admin dashboard of this app [here](https://github.com/Ammar-Ishfaq/NGOs-Managment-2021-Admin)
+
 ## Features
 
 - **Donor Transparency:** Access client information to build trust and verify donations.
