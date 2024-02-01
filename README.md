@@ -8,6 +8,7 @@ This app facilitates seamless management of donations for NGOs, providing donors
 
 - **Donor Transparency:** Access client information to build trust and verify donations.
 - **Track Contributions:** Donors can easily monitor and keep track of their donations.
+- **Chat Functionality:** Enable real-time communication between NGOs and donors for inquiries, updates, and feedback.
 - **Deprecated Mapbox Version:** Note that this repo is built with a deprecated version of Mapbox.
 - **Mapbox SDK Version:** Please note that this app uses Mapbox SDK version 9.
 
